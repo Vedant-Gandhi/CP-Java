@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  * This problem was asked by Microsoft.
  * Given a clock time in hh:mm format, determine, to the nearest degree, the angle between the hour and the minute hands.
@@ -19,6 +21,13 @@ class AngleCalculator
             angle+=30;
         }
         return  angle;
+    }
+    public HashMap<String, Double> getTestCase()
+    {
+        HashMap<String,Double> testCaseMap = new HashMap<>();
+        testCaseMap.put("05:30",30.0);
+        testCaseMap.put("05:15",300.0);
+        return testCaseMap;
     }
 
     /**
